@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Синфдошлар гаштаги — 21 ноябрь</title>
+<meta name="description" content="1986 йилда туғилган 1-мактаб «Г» синф ўқувчиларининг гаштаги. 21 ноябрь, 18:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --bg:#EEF3FB; --panel:#FFFFFF; --ink:#0A1630; --mute:#4B5C7C; --line:#C5D2E8;
+  --acc:#0B63FF; --acc2:#C26A00; --glow:rgba(11,99,255,.14);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#06122A; --panel:#0B1E42; --ink:#E8F2FF; --mute:#93A8CC; --line:#1E3868;
+    --acc:#35DCFF; --acc2:#FFB020; --glow:rgba(53,220,255,.16);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#06122A; --panel:#0B1E42; --ink:#E8F2FF; --mute:#93A8CC; --line:#1E3868;
+  --acc:#35DCFF; --acc2:#FFB020; --glow:rgba(53,220,255,.16);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Exo 2",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:17px; line-height:1.6;
+  background-image:
+    linear-gradient(var(--glow) 1px,transparent 1px),
+    linear-gradient(90deg,var(--glow) 1px,transparent 1px);
+  background-size:36px 36px;
+}
+.wrap{max-width:560px; margin:0 auto; padding:0 20px 56px}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+
+/* hero */
+.hero{padding:56px 0 40px; border-bottom:1px solid var(--line)}
+.hello{margin:0 0 20px; color:var(--mute); font-weight:500}
+.years{
+  display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+  font-family:"JetBrains Mono",ui-monospace,monospace; font-weight:700;
+  font-size:clamp(40px,13vw,68px); line-height:1; letter-spacing:-.03em; margin:0 0 6px;
+}
+.years .a{color:var(--mute)}
+.years .arrow{color:var(--acc); font-size:.6em}
+.years .b{color:var(--acc); text-shadow:0 0 28px var(--glow)}
+.track{height:2px; background:var(--line); margin:14px 0 26px; position:relative; overflow:hidden}
+.track i{position:absolute; inset:0; background:var(--acc); transform-origin:left; animation:fill 2.2s cubic-bezier(.6,0,.2,1) both}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+h1{font-size:clamp(34px,10vw,52px); line-height:1.05; font-weight:800; margin:0 0 14px; letter-spacing:-.01em}
+.sub{margin:0; font-size:19px; color:var(--mute); max-width:30ch}
+
+/* sections */
+section{padding:34px 0 6px}
+h2{font-size:15px; font-weight:700; color:var(--acc); margin:0 0 14px; display:flex; align-items:center; gap:10px}
+h2::after{content:""; flex:1; height:1px; background:var(--line)}
+.panel{
+  background:var(--panel); border:1px solid var(--line); padding:20px; position:relative;
+}
+.panel::before,.panel::after{content:""; position:absolute; width:14px; height:14px; border:2px solid var(--acc)}
+.panel::before{top:-1px; left:-1px; border-right:0; border-bottom:0}
+.panel::after{bottom:-1px; right:-1px; border-left:0; border-top:0}
+
+.when{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:18px}
+.when .day{font-size:56px; font-weight:800; line-height:1; color:var(--acc2)}
+.when .rest{font-size:20px; font-weight:500}
+.when .rest small{display:block; color:var(--mute); font-size:16px; font-weight:300}
+.cal{display:grid; grid-template-columns:repeat(7,1fr); gap:4px; text-align:center; font-family:"JetBrains Mono",ui-monospace,monospace; font-size:14px}
+.cal b{color:var(--mute); font-weight:400; padding-bottom:6px}
+.cal span{padding:7px 0; color:var(--mute)}
+.cal span.on{background:var(--acc2); color:#06122A; font-weight:700; box-shadow:0 0 0 3px var(--glow)}
+
+.count{display:grid; grid-template-columns:repeat(4,1fr); gap:8px}
+.count div{border:1px solid var(--line); background:var(--panel); padding:14px 4px 10px; text-align:center}
+.count strong{display:block; font-family:"JetBrains Mono",ui-monospace,monospace; font-size:clamp(26px,8vw,36px); line-height:1.1; color:var(--acc); font-variant-numeric:tabular-nums}
+.count span{font-size:13px; color:var(--mute)}
+.done{display:none; margin:12px 0 0; color:var(--acc2); font-weight:700}
+
+.place h3{margin:0 0 4px; font-size:24px; font-weight:700}
+.place p{margin:0 0 4px; color:var(--mute)}
+.coords{font-size:13px; color:var(--mute); margin:12px 0 16px !important}
+.btns{display:flex; gap:10px; flex-wrap:wrap}
+.btn{
+  display:inline-block; padding:12px 18px; border:1px solid var(--acc); color:var(--acc);
+  text-decoration:none; font-weight:700; min-height:44px;
+}
+.btn.main{background:var(--acc); color:var(--bg)}
+.btn:hover{box-shadow:0 0 0 3px var(--glow)}
+.btn:focus-visible{outline:3px solid var(--acc2); outline-offset:2px}
+
+.note p{margin:0 0 14px}
+.note p:last-child{margin:0}
+.sign{color:var(--mute); font-weight:500}
+
+footer{padding:34px 0 0; color:var(--mute); font-size:15px; text-align:left}
+
+@media (prefers-reduced-motion: reduce){ .track i{animation:none} }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <p class="hello">Ассалому алайкум, азиз синфдошлар!</p>
+    <div class="years" aria-label="1986 дан 2026 гача">
+      <span class="a">1986</span><span class="arrow">→</span><span class="b" id="yr">2026</span>
+    </div>
+    <div class="track" aria-hidden="true"><i></i></div>
+    <h1>Синфдошлар гаштаги</h1>
+    <p class="sub">1986 йилда туғилган 1-мактаб «Г» синф ўқувчилари гапга чорлайди</p>
+  </header>
+
+  <section>
+    <h2>Сана ва вақт</h2>
+    <div class="panel">
+      <div class="when">
+        <div class="day">21</div>
+        <div class="rest">ноябрь, шанба<small>соат 18:00 да</small></div>
+      </div>
+      <div class="cal" id="cal" aria-label="2026 йил ноябрь тақвими"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Гаштакка қолган вақт</h2>
+    <div class="count" role="timer" aria-live="off">
+      <div><strong id="d">00</strong><span>кун</span></div>
+      <div><strong id="h">00</strong><span>соат</span></div>
+      <div><strong id="m">00</strong><span>дақиқа</span></div>
+      <div><strong id="s">00</strong><span>сония</span></div>
+    </div>
+    <p class="done" id="done">Гаштак бошланди. Кутиб қолдик!</p>
+  </section>
+
+  <section>
+    <h2>Манзил</h2>
+    <div class="panel place">
+      <h3>«Хоразм таомлари»</h3>
+      <p>Гулистон тумани, Деҳқонобод</p>
+      <p class="coords mono">40.534123, 69.030571</p>
+      <div class="btns">
+        <a class="btn main" href="https://yandex.com/maps/?pt=69.030571,40.534123&z=17&l=map" target="_blank" rel="noopener">Яндекс харитада кўриш</a>
+        <a class="btn" href="https://www.google.com/maps?q=40.534123,69.030571" target="_blank" rel="noopener">Google харита</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Дўстлардан сўз</h2>
+    <div class="panel note">
+      <p>Мактаб остонасидан ўтганимизга йиллар бўлди, аммо биринчи қўнғироқ, дарсхонамиз ва ёнма-ён ўтган кунлар ҳамон ёдимизда.</p>
+      <p>Қани, бир дастурхон атрофида йиғилайлик: дийдорлашайлик, эски хотираларни эслайлик, дилдан гаплашиб, дилдан кулайлик.</p>
+      <p>Сизсиз синфимиз тўлиқ эмас. Келишингизни интизор кутамиз!</p>
+      <p class="sign">1986 йил, 1-мактаб «Г» синфи</p>
+    </div>
+  </section>
+
+  <footer>Келолмайдиган бўлсангиз, ташкилотчиларга олдиндан хабар беринг.</footer>
+</main>
+
+<script>
+(function(){
+  // calendar: November 2026 starts on Sunday, week starts on Monday
+  var cal=document.getElementById('cal');
+  var names=['Дш','Сш','Чш','Пш','Жм','Шн','Як'], html='';
+  names.forEach(function(n){html+='<b>'+n+'</b>'});
+  for(var i=0;i<6;i++) html+='<span></span>';
+  for(var d=1; d<=30; d++) html+='<span'+(d===21?' class="on"':'')+'>'+d+'</span>';
+  cal.innerHTML=html;
+
+  // one-time year ticker 1986 -> 2026
+  var yr=document.getElementById('yr');
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    var start=performance.now(), dur=2200;
+    (function tick(t){
+      var p=Math.min(1,(t-start)/dur);
+      var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+      yr.textContent=Math.round(1986+40*e);
+      if(p<1) requestAnimationFrame(tick);
+    })(start);
+  }
+
+  // countdown to 21.11.2026 18:00 (Uzbekistan, UTC+5)
+  var target=new Date('2026-11-21T18:00:00+05:00').getTime();
+  var el={d:document.getElementById('d'),h:document.getElementById('h'),m:document.getElementById('m'),s:document.getElementById('s')};
+  var done=document.getElementById('done');
+  function pad(n){return n<10?'0'+n:''+n}
+  function upd(){
+    var diff=target-Date.now();
+    if(diff<=0){el.d.textContent=el.h.textContent=el.m.textContent=el.s.textContent='00'; done.style.display='block'; return}
+    var s=Math.floor(diff/1000);
+    el.d.textContent=pad(Math.floor(s/86400));
+    el.h.textContent=pad(Math.floor(s%86400/3600));
+    el.m.textContent=pad(Math.floor(s%3600/60));
+    el.s.textContent=pad(s%60);
+  }
+  upd(); setInterval(upd,1000);
+})();
+</script>
+</body>
+</html>
